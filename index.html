@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Štetnost Suhe Hrane</title>
 
-    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-
+    <!-- Vanjski CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,9 +25,8 @@
         </p>
 
         <p>
-            Proces proizvodnje, poznat kao ekstruzija, uključuje visoke temperature 
-            koje mogu <span class="naglasak">uništiti esencijalne nutrijente</span>  poput vitamina B<sup>12</sup>. 
- Mnoge 
+            Proces proizvodnje može smanjiti sadržaj važnih nutrijenata poput vitamina B<sup>12</sup>, 
+            a visoke temperature dodatno utječu na njihovu stabilnost. Mnoge 
             formule oslanjaju se na jeftine <strong>visokoglikemijske filere</strong> 
             (poput žitarica i škroba). Potrebna ravnoteža vlage u hrani za pse je
             daleko iznad H<sub>2</sub>O.
@@ -48,9 +47,7 @@
             <span class="kemikalija">BHA i BHT</span>
         </p>
 
-        <div style="clear: both;"></div>
-
-        <h2>GLAVNI RIZICI </h2>
+        <h2>Glavni rizici</h2>
         <ul>
             <li>Kronična dehidracija bubrega</li>
             <li>Visoki udio ugljikohidrata</li>
@@ -58,66 +55,129 @@
             <li>Prisutnost umjetnih boja i aroma</li>
         </ul>
 
-        <h2>PREPORUKE ZA VLASNIKE </h2>
+        <h2>Preporuke za vlasnike</h2>
         <ol>
             <li>Provjerite razinu proteina iz <strong>pravog mesa</strong></li>
             <li>Razmislite o djelomičnoj zamjeni za mokru ili svježu hranu</li>
             <li>Redovito mjerite unos vode vašeg psa</li>
         </ol>
 
-    </div> 
+        <!-- Forma -->
+        <form id="savjeti" action="#" method="post">
+            <fieldset>
+                <legend>Savjeti za hranjenje psa</legend>
+
+                <label for="vrsta">Vrsta psa:</label><br>
+                <select id="vrsta" name="vrsta" required>
+                    <option value="">-- Odaberite vrstu --</option>
+                    <option value="mali">Mali pas (do 10 kg)</option>
+                    <option value="srednji">Srednji pas (10–25 kg)</option>
+                    <option value="veliki">Veliki pas (25–40 kg)</option>
+                    <option value="divovski">Divovski pas (40+ kg)</option>
+                </select><br><br>
+
+                <label for="aktivnost">Količina aktivnosti dnevno:</label><br>
+                <select id="aktivnost" name="aktivnost">
+                    <option value="">-- Odaberite --</option>
+                    <option value="mala">Mala (do 30 minuta)</option>
+                    <option value="umjerena">Umjerena (30–60 minuta)</option>
+                    <option value="velika">Velika (više od 60 minuta)</option>
+                </select><br><br>
+
+                <label for="tezina">Težina psa:</label><br>
+                <select id="tezina" name="tezina">
+                    <option value="">-- Odaberite --</option>
+                    <option value="do10">Do 10 kg</option>
+                    <option value="10-25">10–25 kg</option>
+                    <option value="25-40">25–40 kg</option>
+                    <option value="40plus">40+ kg</option>
+                </select><br><br>
+
+                <label for="godiste">Godište psa:</label><br>
+                <select id="godiste" name="godiste">
+                    <option value="">-- Odaberite --</option>
+                    <option value="stenac">Štene (do 1 godine)</option>
+                    <option value="odrasli">Odrasli (1–7 godina)</option>
+                    <option value="stariji">Stariji pas (7+ godina)</option>
+                </select><br><br>
+
+                <label for="meso">Omiljena vrsta mesa:</label><br>
+                <input list="vrsteMeso" id="meso" name="meso" placeholder="Odaberite ili upišite...">
+                <datalist id="vrsteMeso">
+                    <option value="Piletina">
+                    <option value="Govedina">
+                    <option value="Janjetina">
+                    <option value="Riba">
+                    <option value="Puretina">
+                </datalist><br><br>
+
+                <label for="hrana">Omiljena marka hrane (link):</label><br>
+                <input type="url" id="hrana" name="hrana" placeholder="https://primjer.com"><br><br>
+
+                <label for="ime">Ime vlasnika:</label><br>
+                <input type="text" id="ime" name="ime" placeholder="Unesite ime" required><br><br>
+
+                <label for="prezime">Prezime vlasnika:</label><br>
+                <input type="text" id="prezime" name="prezime" placeholder="Unesite prezime" required><br><br>
+
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="ime@primjer.com" required><br><br>
+
+                <button type="submit" id="posalji">Pošalji zahtjev</button>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <section class="zadaca">
+      <h2>UNOS HRANE OVISNO O TEŽINI </h2>
+
+      <table class="prehrana-tablica">
+        <thead>
+          <tr>
+            <th rowspan="2">Vrsta psa</th>
+            <th colspan="3">Preporučena dnevna količina (g)</th>
+          </tr>
+          <tr>
+            <th>Niska aktivnost</th>
+            <th>Umjerena aktivnost</th>
+            <th>Visoka aktivnost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mali (do 10 kg)</td>
+            <td>80–120</td>
+            <td>100–150</td>
+            <td>120–180</td>
+          </tr>
+          <tr>
+            <td>Srednji (10–25 kg)</td>
+            <td>150–250</td>
+            <td>200–300</td>
+            <td>250–400</td>
+          </tr>
+          <tr>
+            <td>Veliki (25+ kg)</td>
+            <td>300–450</td>
+            <td>400–600</td>
+            <td>500–750</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
 </body>
 </html>
-<form id="savjeti" action="#" method="post">
-    <fieldset>
-        <legend>Savjeti za hranjenje psa</legend>
 
-        <label for="aktivnost">Količina aktivnosti dnevno:</label><br>
-        <select id="aktivnost" name="aktivnost">
-            <option value="">-- Odaberite --</option>
-            <option value="mala">Mala (do 30 minuta)</option>
-            <option value="umjerena">Umjerena (30–60 minuta)</option>
-            <option value="velika">Velika (više od 60 minuta)</option>
-        </select><br><br>
 
-        <label for="tezina">Težina psa:</label><br>
-        <select id="tezina" name="tezina">
-            <option value="">-- Odaberite --</option>
-            <option value="do10">Do 10 kg</option>
-            <option value="10-25">10–25 kg</option>
-            <option value="25-40">25–40 kg</option>
-            <option value="40plus">40+ kg</option>
-        </select><br><br>
+   
+        
+       
 
-        <label for="godiste">Godište psa:</label><br>
-        <select id="godiste" name="godiste">
-            <option value="">-- Odaberite --</option>
-            <option value="stenac">Štene (do 1 godine)</option>
-            <option value="odrasli">Odrasli (1–7 godina)</option>
-            <option value="stariji">Stariji pas (7+ godina)</option>
-        </select><br><br>
 
-        <hr>
-<label for="marka">Omiljena marka pseće hrane:</label><br>
-<input list="marke" id="marka" name="marka" placeholder="Upišite ili odaberite">
-<datalist id="marke">
-    <option value="Royal Canin">
-    <option value="Acana">
-    <option value="Orijen">
-    <option value="Pedigree">
-    <option value="Purina">
-</datalist><br><br>
+      
+        
 
-        <label for="ime">Ime vlasnika:</label><br>
-        <input type="text" id="ime" name="ime" placeholder="Unesite ime" required><br><br>
+   
 
-        <label for="prezime">Prezime vlasnika:</label><br>
-        <input type="text" id="prezime" name="prezime" placeholder="Unesite prezime" required><br><br>
-
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" placeholder="ime@primjer.com" required><br><br>
-
-        <button type="submit" id="posalji">Pošalji zahtjev</button>
-    </fieldset>
-</form>
