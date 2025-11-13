@@ -3,36 +3,50 @@ body {
     color: #141414; 
     margin: 0; 
     background-image: url(animals-1454214_1280.png);
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; 
     background-color: #abc298;
+
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 10px;
+    box-sizing: border-box;
+
+    text-align: center; 
 }
 
 .container {
-    width: 60%;
-    max-width: 600px; 
-    margin: 50px 20px; 
-    background-color: rgba(248, 249, 236, 0.95); 
-    text-align: center; 
+    width: 90%;
+    max-width: 760px; 
+    margin: 0 auto; 
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 30px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 h1 {
     font-family: 'Lora', serif;
-    font-weight: 900;
+    font-weight: 700;
     font-style: italic; 
     color: #ffffff; 
-    background-color: #6ea240; 
-    margin: 38px 20px; 
-    text-align: center;
+    background-color: #38680d; 
+    padding: 20px;
+    margin: -30px -30px 20px -30px; 
+    border-radius: 8px 8px 0 0;
+}
+
+h2 {
+    margin-top: 25px;
+    color: #38680d;
 }
 
 p {
-    margin: 15px 0; 
+    margin: 12px 0; 
     line-height: 1.6; 
 }
 
@@ -43,54 +57,52 @@ p em {
 
 strong {
     font-weight: 700; 
-    color: #1778cd; 
+    color: #0275d8; 
 }
 
- sup {
+sub, sup {
     color: #f0ad4e; 
     font-weight: 700;
 }
 
-.naglasak {
-    color: #c0392b; 
-    font-weight: 700;
-}
-
-ul {
-    list-style: square;
-    list-style-position: inside; 
-    margin: 20px auto; 
-}
-
-ol {
-    list-style: lower-roman;
-    list-style-position: inside;  
-    margin: 20px auto; 
+ul, ol {
+    background-color: #fdfdfd; 
+    padding: 20px;
+    margin: 12px 0 20px 0; 
+    border-radius: 5px;
+    border: 1px solid #eee;
+    list-style-position: inside;
+    display: inline-block; 
+    text-align: left; 
 }
 
 .izdvojeni-odjeljak {
-    display: block;
-    width: 90%;
-    max-width: 450px;
+    width: 100%;
+    max-width: 520px;
     padding: 15px;
-    background-color: #e0b337; 
+    background-color: #f0ad4e; 
+    border: 1px solid #eea236;
+    border-radius: 5px;
     font-style: italic; 
     margin: 20px auto; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .kemikalija {
-    color: #408540; 
+    color: #5cb85c; 
     font-weight: 700;
     display: block; 
     margin-top: 10px;
 }
 
+
 form#savjeti {
-    margin-top: 40px;
+    margin-top: 20px;
     background-color: #eef5e5;
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #cde0b6;
+    display: inline-block;
 }
 
 form#savjeti fieldset {
@@ -103,7 +115,7 @@ form#savjeti legend {
     font-weight: bold;
     font-family: 'Lora', serif;
     color: #38680d;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 form#savjeti label {
@@ -111,15 +123,16 @@ form#savjeti label {
     color: #2d3e1f;
 }
 
+form#savjeti input,
 form#savjeti select,
-form#savjeti input {
-    width: 100%;
+form#savjeti button {
+    width: 90%;
     padding: 8px;
-    margin-top: 5px;
+    margin-top: 6px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
-    transition: 0.2s;
+    box-sizing: border-box;
 }
 
 form#savjeti input:focus,
@@ -129,8 +142,16 @@ form#savjeti select:focus {
     background-color: #f6fff0;
 }
 
+form#savjeti input[type="email"] {
+    background-color: #fff8e1;
+}
+
+form#savjeti input[type="url"] {
+    background-color: #e8f4ff;
+}
+
 form#savjeti button {
-    width: 100%;
+    margin-top: 12px;
     background-color: #7da453;
     color: white;
     border: none;
@@ -138,7 +159,7 @@ form#savjeti button {
     padding: 10px;
     font-weight: bold;
     font-size: 1em;
-    transition: background-color 0.3s, transform 0.1s;
+    transition: background-color 0.2s, transform 0.08s;
 }
 
 form#savjeti button:hover {
@@ -147,13 +168,56 @@ form#savjeti button:hover {
 }
 
 form#savjeti button:active {
-    transform: scale(0.98);
+    transform: scale(0.99);
 }
 
-input[type="email"] {
-    background-color: #fff8e1;
+
+.zadaca {
+  width: 90%;
+  max-width: 900px;
+  margin: 60px auto; 
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-input[type="text"] {
-    background-color: #ffffff;
+table.prehrana-tablica {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 2px solid #38680d;
+  border-radius: 8px;
+  overflow: hidden;
 }
+
+.prehrana-tablica th,
+.prehrana-tablica td {
+  border: 1px solid #abc298;
+  padding: 12px;
+  text-align: center;
+}
+
+.prehrana-tablica thead {
+  background-color: #38680d;
+  color: #fff;
+}
+
+.prehrana-tablica tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.prehrana-tablica tbody tr:nth-child(odd) {
+  background-color: #e8f2e2;
+}
+
+
+
+
+
+
+
+
+
+
+
