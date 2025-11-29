@@ -210,6 +210,41 @@ table.prehrana-tablica {
 .prehrana-tablica tbody tr:nth-child(odd) {
   background-color: #e8f2e2;
 }
+#predaja-tekst {
+  position: relative;
+  top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+section.zadaca table {
+  margin-top: 15px;
+}
+section.zadaca h2 {
+  position: relative;
+  top: 0;
+}
+form#savjeti label {
+  display: block;
+}
+.kemikalija {
+  float: left;
+  width: 100%;
+}
+
+.opasnost-element {
+  clear: both;
+}
+
+.prehrana-tablica td,
+.prehrana-tablica th {
+  vertical-align: middle;
+}
+
+section.zadaca {
+  margin-top: 60px;
+}
+
 
 
 
