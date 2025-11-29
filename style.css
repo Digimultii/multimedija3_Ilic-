@@ -212,38 +212,42 @@ table.prehrana-tablica {
 }
 #predaja-tekst {
   position: relative;
-  top: 0;
+  left: 20px;
+  background-color: #dff0d8;
+  border: 2px solid #7da453;
+  padding: 10px;
+  border-radius: 8px;
   margin-bottom: 15px;
-  text-align: center;
 }
-
 section.zadaca table {
-  margin-top: 15px;
-}
-section.zadaca h2 {
-  position: relative;
-  top: 0;
-}
-form#savjeti label {
-  display: block;
+  border: 3px solid #38680d;
 }
 .kemikalija {
   float: left;
   width: 100%;
+  background-color: #eef9ea;
+  padding: 5px;
+  border-radius: 6px;
 }
-
 .opasnost-element {
   clear: both;
 }
-
+form#savjeti label {
+  display: block;
+  margin-top: 10px;
+}
+section.zadaca h2 {
+  position: relative;
+  top: -5px;
+}
 .prehrana-tablica td,
 .prehrana-tablica th {
   vertical-align: middle;
 }
-
 section.zadaca {
-  margin-top: 60px;
+  margin-top: 80px;
 }
+
 
 
 
