@@ -248,6 +248,72 @@ section.zadaca {
   margin-top: 80px;
 }
 
+#predaja-mediji {
+  width: 90%;
+  max-width: 850px;
+  background-color: white;
+  margin: 60px auto;
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid #38680d;
+}
+
+
+#predaja-mediji img {
+  width: 100%;
+  max-width: 400px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 8px;
+}
+
+
+#predaja-mediji iframe {
+  width: 70%;
+  height: 300px;
+  border: none;
+}
+
+
+#predaja-mediji object {
+  width: 100%;
+  height: 900px;
+  border: 1px solid #ccc;
+}
+
+
+#predaja-mediji a {
+  display: inline-block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 15px;
+  }
+
+  .container,
+  .zadaca,
+  #predaja-mediji {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+
+}
+
+
 
 
 
